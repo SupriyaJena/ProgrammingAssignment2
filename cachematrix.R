@@ -1,6 +1,6 @@
 ## Author: Supriya Jena
 ## Short description of the assignment "Caching the Inverse of a Matrix"
-
+##
 ## Following two functions are for the R Programming 
 ## Assignment 2 - "Caching the Inverse of a Matrix" of Data Science Specialization Track 
 ## offered on Coursera through the Johns Hopkins School for Public Health
@@ -8,12 +8,12 @@
 ## Function 1: makeCacheMatrix
 ##      This function creates a special "matrix" object that can cache its inverse.
 ##      Note: Matrix inversion is usually a costly computation, specifically for large size matrices. 
-##      Therefore it would be benficial to compute and cache the inverse of matrix to avoid repeted compution.
+##      Therefore it would be beneficial to compute and cache the inverse of matrix to avoid repeated computation.
 ##
 ## Function 2: cacheSolve
 ##      This function computes the inverse of the special "matrix" returned by makeCacheMatrix. 
 ##      If the inverse has already been calculated (and the matrix has not changed),
-##      then the cachesolve will retrieve the inverse from the cache.
+##      then the cachesolve function will retrieve the inverse from the cache.
 ##
 ## ********    *******  ******* makeCacheMatrix *******  *******  ******
 ## The makeCacheMatrix function is created using the same format as the 
@@ -54,14 +54,14 @@ makeCacheMatrix <- function(x = matrix())
 
 ## ****  ********    *******  ******* cacheSolve *******  *******  ******  ****
 ## The cacheSolve function is created using the same format as the assignment 
-## example. It computes the inverse and cache the result. If cacheSolve function 
-## is used again on the same special matrix, then it will avoid the recomputation 
+## example. It computes the inverse and caches the result. If cacheSolve function 
+## is used again on the same special matrix, then it will avoid the re-computation 
 ## and will return the pre-computed result. An informative message will be shown 
 ## in the command prompt when the pre-computed result is returned instead.
 ## 
 cacheSolve <- function(x, ...) 
 {
-        ## Get the existing inverse and see if it has been computed yet
+        ## Get the existing inverse value and see if it has been computed yet
         invr <- x$getinverse()
         
         ## If it has...
